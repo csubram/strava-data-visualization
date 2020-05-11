@@ -5,7 +5,7 @@ A tool to retrieve Strava data from one's profile and filter by activity type.
 
 ### Local setup
 
-1. Get an access token by creating a developer account: https://www.strava.com/settings/api
+1. Create a developer account: https://www.strava.com/settings/api
 2. Enable activity read access for your developer account. 
   - You can use curl or paste the first request into a browser, and read the "code" parameter from the response. 
   ```
