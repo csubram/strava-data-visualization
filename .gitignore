@@ -1,3 +1,4 @@
 secrets.py
 make_post.py
-__pycache__/
+__pycache__/*
+*.pyc
