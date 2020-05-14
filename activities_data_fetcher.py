@@ -68,6 +68,7 @@ class ActivitiesDataFetcher:
             }
         )
 
+        self._verify_query_response_is_ok(response)
         return response.json()
 
 

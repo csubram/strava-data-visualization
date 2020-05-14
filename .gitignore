@@ -1,5 +1,6 @@
 secrets.py
 make_post.py
 personal_record_finder.py
+activities.txt
 __pycache__/*
 *.pyc
