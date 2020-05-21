@@ -43,7 +43,7 @@ A tool to retrieve Strava data from one's profile and filter by activity type.
   dp.plot_distance_per_week()
   dp.plot_distance_per_month()
   ```
-  The resulting plots will look like this:
+  The resulting plots will look like this:  
   ![Alt text](graphs/distance_per_week.png)
   ![Alt text](graphs/distance_per_month.png)
   
@@ -55,5 +55,5 @@ A tool to retrieve Strava data from one's profile and filter by activity type.
   pp = PacePlotter(activity_type='Run')
   pp.plot_pace_each_month()
   ```
-  The resulting plot will look like this:
+  The resulting plot will look like this:  
   ![Alt text](graphs/pace_each_month.png)
