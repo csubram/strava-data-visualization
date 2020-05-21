@@ -33,3 +33,27 @@ A tool to retrieve Strava data from one's profile and filter by activity type.
   ```
   python3 activities_data_fetcher.py
   ```
+  
+  ### Create Distance Plots
+  Create a bar graph showing cumulative distance for a certain activity. This example shows how to find running distance totals.
+  ```python
+  from distance_plotter import DistancePlotter
+  
+  dp = DistancePlotter(activity_type='Run')
+  dp.plot_distance_per_week()
+  dp.plot_distance_per_month()
+  ```
+  The resulting plots will look like this:
+  ![Alt text](graphs/distance_per_week.png)
+  ![Alt text](graphs/distance_per_month.png)
+  
+  ### Create Pace Plots
+  Create a [boxplot](https://en.wikipedia.org/wiki/Box_plot) which shows how the pace of your activities varies by month. 
+  ```python
+  from pace_plotter import PacePlotter
+  
+  pp = PacePlotter(activity_type='Run')
+  pp.plot_pace_each_month()
+  ```
+  The resulting plot will look like this:
+  ![Alt text](graphs/pace_each_month.png)
