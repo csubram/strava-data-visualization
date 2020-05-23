@@ -1,38 +1,20 @@
 # strava-data-visualization
 
 ### Description
-A tool to retrieve Strava data from one's profile and filter by activity type.
+A tool to retrieve Strava data from one's profile and create detailed graphs. Current functionality allows showing cumulative distance totals as well as pace spreads per week and per month. 
 
 ### Local setup
 
-1. Create a developer account: https://www.strava.com/settings/api
-2. Enable activity read access for your developer account. 
-  - You can use curl or paste the first request into a browser, and read the "code" parameter from the response. 
+1. Create a [developer account](https://www.strava.com/settings/api)
+2. Using credentials from your account, fill in the [client info json file](authorization/client_info.json)
+3. Install all dependencies:
   ```
-  https://www.strava.com/oauth/authorize?
-    client_id=<CLIENT_ID>&
-    redirect_uri=<CALLBACK_DOMAIN>&
-    response_type=code&
-    scope=activity:read
+  pip3 install -r requirements.txt
   ```
-  - The request above should return an authorization code. Use this authorization code to fill in the POST request below. Send this request, and read the "access_code" from that response.
-    
+3. Allow the application to access your data by running the permissions script:
   ```
-  curl -X POST https://www.strava.com/oauth/token?
-    client_id=<CLIENT_ID>&
-    client_secret=<CLIENT_SECRET>&
-    code=<AUTHORIZATION_CODE>&
-    grant_type=authorization_code
-  ```
-3. Paste the access code found in the previous step into a file called "secrets.py" as follows:
-  ```python
-  access_token = 'code goes here'
-  ```
-  
-4. Run the application from the command line:
-  ```
-  python3 activities_data_fetcher.py
-  ```
+  python3 grant_permissions.py
+  ```  
   
   ### Create Distance Plots
   Create a bar graph showing cumulative distance for a certain activity. This example shows how to find running distance totals.
