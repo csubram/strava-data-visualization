@@ -2,5 +2,6 @@ secrets.py
 activities.txt
 specific_activity.txt
 *access_tokens.json
+*client_info.json
 __pycache__/*
 *.pyc
