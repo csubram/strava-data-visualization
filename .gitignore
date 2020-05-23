@@ -1,8 +1,6 @@
 secrets.py
-make_post.py
-personal_record_finder.py
 activities.txt
 specific_activity.txt
-access_tokens.json
+*access_tokens.json
 __pycache__/*
 *.pyc
